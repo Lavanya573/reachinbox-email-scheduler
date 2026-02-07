@@ -27,7 +27,15 @@ Access:
 
 ---
 
-## 📋 Architecture Overview
+## � Documentation
+
+- **[Demo Script](DEMO_SCRIPT.md)** - Step-by-step guide for 5-minute demo (scheduling, dashboard, restart scenario)
+- **[Assumptions & Trade-offs](ASSUMPTIONS_AND_TRADEOFFS.md)** - Design decisions, shortcuts, and production considerations
+- **[Architecture Overview](#-architecture-overview)** - System design details
+
+---
+
+## �📋 Architecture Overview
 
 ### System Architecture
 
