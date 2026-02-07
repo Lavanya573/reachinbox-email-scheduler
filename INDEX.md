@@ -4,27 +4,27 @@
 
 ---
 
-## 🎯 Quick Navigation
+ Quick Navigation
 
-### 🚀 Getting Started
+Getting Started
 - **[QUICKSTART.md](./QUICKSTART.md)** - Get running in 5 minutes
 - **[README.md](./README.md)** - Full feature documentation
 
-### 📖 Understanding the System
+Understanding the System
 - **[SYSTEM_OVERVIEW.md](./SYSTEM_OVERVIEW.md)** - Complete system summary
 - **[ARCHITECTURE.md](./ARCHITECTURE.md)** - Design decisions & data flow
 - **[DIAGRAMS.md](./DIAGRAMS.md)** - Visual system architecture
 
-### 🏗️ Production Ready
+Production Ready
 - **[PRODUCTION.md](./PRODUCTION.md)** - Deploy to production
 - **[docker-compose.yml](./docker-compose.yml)** - One-command deployment
 
-### 🧪 Testing
+ Testing
 - **[test-api.sh](./test-api.sh)** - API test examples
 
 ---
 
-## ⚡ Start in 30 Seconds
+ Start in 30 Seconds
 
 ```bash
 # Terminal 1: Start Redis
@@ -37,49 +37,11 @@ cd backend && npm install && npm run dev
 cd frontend && npm install && npm start
 
 # Open browser: http://localhost:3000
-```
 
-✅ **Done!** System is running.
 
----
 
-## 📁 What's Included
 
-```
-├── backend/                    # Express API + BullMQ Worker
-│   ├── src/
-│   │   ├── config/database.js          # SQLite
-│   │   ├── services/emailService.js    # Ethereal Email
-│   │   ├── services/schedulerService.js # BullMQ Job Queue
-│   │   ├── routes/emailRoutes.js       # REST Endpoints
-│   │   └── index.js                    # Express Server
-│   ├── Dockerfile
-│   └── package.json
-│
-├── frontend/                   # React Dashboard
-│   ├── src/
-│   │   ├── components/
-│   │   │   ├── ScheduleForm.js
-│   │   │   ├── EmailList.js
-│   │   │   └── Statistics.js
-│   │   ├── Dashboard.js
-│   │   └── index.js
-│   ├── Dockerfile
-│   └── package.json
-│
-├── docker-compose.yml          # Run everything together
-├── README.md                    # Feature documentation
-├── QUICKSTART.md                # 5-minute setup
-├── SYSTEM_OVERVIEW.md           # Project summary
-├── ARCHITECTURE.md              # Technical design
-├── PRODUCTION.md                # Deploy guide
-├── DIAGRAMS.md                  # Visual architecture
-└── test-api.sh                  # API tests
-```
-
----
-
-## 🎨 Features
+ Features
 
 | Feature | Status |
 |---------|--------|
@@ -96,7 +58,7 @@ cd frontend && npm install && npm start
 
 ---
 
-## 🔌 API Endpoints
+ API Endpoints
 
 ### Schedule an Email
 ```
@@ -167,7 +129,7 @@ NO JOBS LOST
 
 ---
 
-## 🔒 Reliability
+ Reliability
 
 - ✅ **Persistent Queue** - BullMQ + Redis + SQLite
 - ✅ **Automatic Recovery** - On server restart
@@ -177,7 +139,7 @@ NO JOBS LOST
 
 ---
 
-## 🚀 Deployment Options
+ Deployment Options
 
 ### Docker Compose (Recommended)
 ```bash
@@ -196,7 +158,7 @@ cd backend && npm install && npm run dev
 cd frontend && npm install && npm start
 ```
 
-### Production
+ Production
 See [PRODUCTION.md](./PRODUCTION.md) for:
 - Heroku deployment
 - AWS deployment
@@ -207,7 +169,7 @@ See [PRODUCTION.md](./PRODUCTION.md) for:
 
 ---
 
-## 📚 Documentation Guide
+ Documentation Guide
 
 | File | Purpose |
 |------|---------|
@@ -226,7 +188,7 @@ See [PRODUCTION.md](./PRODUCTION.md) for:
 
 ---
 
-## 🛠️ Technology Stack
+Technology Stack
 
 **Backend:**
 - Node.js + Express.js
@@ -247,7 +209,7 @@ See [PRODUCTION.md](./PRODUCTION.md) for:
 
 ---
 
-## 📊 Architecture Summary
+Architecture Summary
 
 ```
 User Browser (React)
@@ -267,7 +229,7 @@ Email Service (Ethereal)
 
 ---
 
-## 🧪 Test It Out
+ Test It Out
 
 ### Step 1: Schedule email for 2 minutes from now
 1. Open http://localhost:3000
@@ -288,7 +250,7 @@ Email Service (Ethereal)
 
 ---
 
-## 🎓 Learning Outcomes
+ Learning Outcomes
 
 By exploring this project, you'll learn:
 
@@ -335,34 +297,12 @@ rm backend/data/emails.db-shm
 
 ---
 
-## 📞 Next Steps
 
-1. ✅ Run system locally (QUICKSTART.md)
-2. ✅ Schedule test emails
-3. ✅ Verify persistence with restart
-4. ✅ Read ARCHITECTURE.md
-5. ✅ Deploy to production (PRODUCTION.md)
-6. ✅ Add authentication
-7. ✅ Add more email providers
-8. ✅ Scale to multiple instances
 
 ---
 
-## 📝 Project Stats
 
-- **Backend**: ~500 lines of code
-- **Frontend**: ~400 lines of code
-- **Time to setup**: < 5 minutes
-- **Time to first email**: < 10 minutes
-- **Production ready**: Yes ✅
 
----
-
-## 🎉 You're All Set!
-
-You now have a **production-grade email scheduler** like the one ReachInbox uses internally.
-
-**Get started:**
 ```bash
 cd backend && npm install && npm run dev
 # In another terminal
@@ -371,9 +311,7 @@ cd frontend && npm install && npm start
 
 Then open **http://localhost:3000** and start scheduling emails!
 
----
 
-**Questions?** Check the documentation files above.
 
 **Issues?** See README.md troubleshooting section.
 
