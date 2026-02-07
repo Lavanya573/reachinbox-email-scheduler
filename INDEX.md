@@ -2,25 +2,7 @@
 
 **A production-grade email scheduling system demonstrating ReachInbox's core technology.**
 
----
 
- Quick Navigation
-
-Getting Started
-- **[QUICKSTART.md](./QUICKSTART.md)** - Get running in 5 minutes
-- **[README.md](./README.md)** - Full feature documentation
-
-Understanding the System
-- **[SYSTEM_OVERVIEW.md](./SYSTEM_OVERVIEW.md)** - Complete system summary
-- **[ARCHITECTURE.md](./ARCHITECTURE.md)** - Design decisions & data flow
-- **[DIAGRAMS.md](./DIAGRAMS.md)** - Visual system architecture
-
-Production Ready
-- **[PRODUCTION.md](./PRODUCTION.md)** - Deploy to production
-- **[docker-compose.yml](./docker-compose.yml)** - One-command deployment
-
- Testing
-- **[test-api.sh](./test-api.sh)** - API test examples
 
 ---
 
@@ -41,20 +23,7 @@ cd frontend && npm install && npm start
 
 
 
- Features
 
-| Feature | Status |
-|---------|--------|
-| Schedule emails to send at specific time | ✅ Complete |
-| Persistent job queue with BullMQ + Redis | ✅ Complete |
-| Survive server restarts without losing jobs | ✅ Complete |
-| React dashboard (schedule/view/stats) | ✅ Complete |
-| Ethereal Email integration for testing | ✅ Complete |
-| Email with automatic retry & backoff | ✅ Complete |
-| SQLite database for persistence | ✅ Complete |
-| REST API for automation | ✅ Complete |
-| Docker & Docker Compose ready | ✅ Complete |
-| Production deployment guide | ✅ Complete |
 
 ---
 
@@ -69,22 +38,11 @@ POST /api/emails/schedule
   "body": "Test email",
   "scheduledTime": 1675000000
 }
-```
 
-### View Status
-```
-GET /api/emails
-GET /api/emails?status=scheduled
-GET /api/emails?status=sent
-GET /api/emails?status=failed
-GET /api/emails/:id
-GET /api/emails/stats/summary
-GET /health
-```
 
 ---
 
-## 💡 How It Works
+
 
 ### 1. Scheduling
 ```
@@ -127,20 +85,9 @@ Jobs resume at correct scheduled time
 NO JOBS LOST
 ```
 
----
 
- Reliability
 
-- ✅ **Persistent Queue** - BullMQ + Redis + SQLite
-- ✅ **Automatic Recovery** - On server restart
-- ✅ **Retry Logic** - 3 attempts with exponential backoff
-- ✅ **Error Tracking** - All failures logged
-- ✅ **Scalable** - Multiple instances supported
-
----
-
- Deployment Options
-
+'''
 ### Docker Compose (Recommended)
 ```bash
 docker-compose up -d
@@ -156,18 +103,7 @@ cd backend && npm install && npm run dev
 
 # Terminal 2
 cd frontend && npm install && npm start
-```
 
- Production
-See [PRODUCTION.md](./PRODUCTION.md) for:
-- Heroku deployment
-- AWS deployment
-- Google Cloud deployment
-- Docker production setup
-- Nginx configuration
-- SSL/TLS setup
-
----
 
  Documentation Guide
 
@@ -250,20 +186,6 @@ Email Service (Ethereal)
 
 ---
 
- Learning Outcomes
-
-By exploring this project, you'll learn:
-
-1. **Job Scheduling** - How BullMQ works
-2. **Persistent Queues** - Combine Redis + SQLite
-3. **Worker Patterns** - Process jobs asynchronously
-4. **Database Design** - Schema for email metadata
-5. **Full-Stack Development** - React + Node + Database
-6. **REST APIs** - Build production APIs
-7. **Error Handling** - Retries & backoff
-8. **Deployment** - Docker & production setup
-9. **System Design** - Architecture patterns
-10. **Monitoring** - Health checks & logging
 
 ---
 
@@ -313,8 +235,4 @@ Then open **http://localhost:3000** and start scheduling emails!
 
 
 
-**Issues?** See README.md troubleshooting section.
 
-**Ready for production?** See PRODUCTION.md for deployment guides.
-
-🚀 **Happy scheduling!**
