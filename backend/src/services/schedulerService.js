@@ -98,12 +98,16 @@ async function jobProcessor(job) {
 
     // Update database - mark as sent
     const sentAt = Math.floor(Date.now() / 1000);
+    const previewUrl = result.previewUrl || null;
     await runAsync(
-      `UPDATE emails SET status = 'sent', sent_at = ?, job_id = ? WHERE id = ?`,
-      [sentAt, job.id, emailId]
+      `UPDATE emails SET status = 'sent', sent_at = ?, job_id = ?, preview_url = ? WHERE id = ?`,
+      [sentAt, job.id, previewUrl, emailId]
     );
 
     console.log(`Email scheduled for ID ${emailId} was sent`);
+    if (previewUrl) {
+      console.log(`Preview URL: ${previewUrl}`);
+    }
     return result;
   } catch (error) {
     console.error(`Failed to process job ${job.id}:`, error.message);

@@ -96,6 +96,28 @@
   border: 1px solid #f5c6cb;
 }
 
+.preview-link {
+  display: inline-block;
+  padding: 6px 12px;
+  background-color: #667eea;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background-color 0.2s;
+  white-space: nowrap;
+}
+
+.preview-link:hover {
+  background-color: #5568d3;
+  text-decoration: none;
+}
+
+.preview-link:visited {
+  color: white;
+}
+
 @media (max-width: 768px) {
   .emails-table {
     font-size: 0.85rem;

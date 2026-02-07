@@ -50,7 +50,8 @@ async function createTables() {
           sent_at INTEGER,
           status TEXT DEFAULT 'scheduled',
           job_id TEXT,
-          error_message TEXT
+          error_message TEXT,
+          preview_url TEXT
         )`,
         (err) => {
           if (err) {

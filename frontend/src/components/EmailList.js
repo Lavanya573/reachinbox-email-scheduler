@@ -47,6 +47,7 @@ function EmailList({ emails, title }) {
               <th>Created</th>
               <th>Scheduled</th>
               <th>Sent</th>
+              {title.includes('Sent') && <th>View Email</th>}
             </tr>
           </thead>
           <tbody>
@@ -59,6 +60,23 @@ function EmailList({ emails, title }) {
                 <td className="date-cell">{formatDate(email.created_at)}</td>
                 <td className="date-cell">{formatDate(email.scheduled_time)}</td>
                 <td className="date-cell">{formatDate(email.sent_at)}</td>
+                {title.includes('Sent') && (
+                  <td>
+                    {email.preview_url ? (
+                      <a
+                        href={email.preview_url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="preview-link"
+                        title="View email in Ethereal"
+                      >
+                        📧 Preview
+                      </a>
+                    ) : (
+                      <span style={{ color: '#999' }}>No preview</span>
+                    )}
+                  </td>
+                )}
               </tr>
             ))}
           </tbody>
